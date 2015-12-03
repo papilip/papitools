@@ -88,11 +88,11 @@ else
     if silence == false && force == false
       # Ask question : Do you want update brew ?
       puts '-' * 77
-      puts 'Voulez-vous mettre à jour BREW ? [o/N]'
+      puts 'Voulez-vous mettre à jour BREW ? [y/N]'
       yes = STDIN.gets.chomp
     end
 
-    if force || yes.upcase[0] == 'o'
+    if force || yes.downcase[0] == 'y'
       update! force, silence
     end
   end

@@ -1,0 +1,52 @@
+# [user]
+#   name  =
+#   email =
+
+[alias]
+  a = add
+  b = branch
+  c = clone
+  d = diff
+  f = fetch
+  m = merge
+  p = push
+  t = log --graph --date=relative --pretty=format:'%Cred%h8%Creset - %s %C(blue)(%cr)%Creset %C(green)%cn%Creset %C(yellow)%d%Creset' --all
+  w = flow
+
+  ci  = commit
+  co  = checkout
+  dc  = diff --cached
+  pl  = pull
+  rb  = rebase
+  st  = status --short --branch
+  tt  = log --graph --pretty=format:'%s' --all
+
+  sh  = stash
+  sha = stash apply
+  shb = stash branch
+  shc = stash clear
+  shd = stash drop
+  shl = stash list
+  shp = stash pop
+  shs = stash show
+
+  cam = commit --amend --reuse-message=HEAD
+
+  last  = log --graph --pretty=format:'%Cred%h%Creset - %s %C(blue)(%cr)%Creset %C(green)%cn%Creset %C(yellow)%d%Creset' -1 HEAD
+  lastt = log --graph --pretty=format:'%Cred%h%Creset - %s %C(blue)(%cr)%Creset %C(green)%cn%Creset %C(yellow)%d%Creset' --abbrev-commit -1 HEAD
+  tree  = log --graph --pretty=format:'%Cred%h%Creset - %s %C(blue)(%cr)%Creset %C(green)%cn%Creset %C(yellow)%d%Creset' --all
+
+  unadd    = rm --cached
+  unpushed = log --graph --pretty=format:'%Cred%h%Creset - %s %C(blue)(%cr)%Creset %C(green)%cn%Creset %C(yellow)%d%Creset' origin/master..master
+  unstage  = reset HEAD --
+
+[branch]
+  autosetuprebase = always
+
+[color]
+  ui = true
+
+[core]
+  editor       = vim
+  excludesfile = ~/.gitignore
+  pager        = less -FRSX
